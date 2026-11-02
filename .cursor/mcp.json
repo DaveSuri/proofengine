@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "proofengine": {
+      "command": "node",
+      "args": [
+        "/Users/devanshsuri/Documents/trae_projects/ProofEngine/packages/mcp-server/dist/index.js"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"invariant-parser.d.ts","sourceRoot":"","sources":["../src/invariant-parser.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,mBAAmB,EAAE,MAAM,SAAS,CAAC;AAK9C,wBAAgB,gBAAgB,CAAC,MAAM,EAAE,MAAM,GAAG;IAChD,UAAU,EAAE,mBAAmB,EAAE,CAAC;IAClC,UAAU,EAAE,mBAAmB,EAAE,CAAC;CACnC,CAsCA;AAED,wBAAgB,mBAAmB,CAAC,IAAI,EAAE,MAAM,GAAG,MAAM,CAQxD"}

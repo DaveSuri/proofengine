@@ -1,0 +1,27 @@
+{
+  "name": "proofengine",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "description": "Symbolic Verification Layer for Financial Code",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @proofengine/core && npm run build -w @proofengine/solver-api && npm run build -w @proofengine/cli && npm run build -w @proofengine/mcp-server",
+    "test": "npm run build && node test/core.test.js && node test/solver.test.js && node test/mcp-and-quota.test.js && node test/disasters.test.js",
+    "test:core": "npm run build -w @proofengine/core && node test/core.test.js",
+    "test:solver": "npm run build -w @proofengine/core && npm run build -w @proofengine/solver-api && node test/solver.test.js",
+    "test:mcp": "npm run build && node test/mcp-and-quota.test.js",
+    "test:disasters": "npm run build && node test/disasters.test.js",
+    "verify": "node packages/cli/dist/index.js verify",
+    "check": "node packages/cli/dist/index.js check"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "ts-morph": "^27.0.2",
+    "turbo": "^2.9.6"
+  }
+}

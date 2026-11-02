@@ -1,0 +1,23 @@
+{
+  "name": "@proofengine/core",
+  "version": "0.1.0",
+  "description": "AST extraction, invariant parser, and SMT-LIB2 constraint generator for ProofEngine",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "tsc && node ../../test/core.test.js"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.23.0",
+    "@babel/traverse": "^7.23.0",
+    "@babel/types": "^7.23.0",
+    "ts-morph": "^27.0.2"
+  },
+  "devDependencies": {
+    "@types/babel__traverse": "^7.20.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@proofengine/cli",
+  "version": "0.1.0",
+  "description": "Local CLI for ProofEngine symbolic verification",
+  "main": "dist/index.js",
+  "bin": {
+    "proofengine": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "dev": "tsc --watch",
+    "verify": "node dist/index.js verify",
+    "check": "node dist/index.js check"
+  },
+  "dependencies": {
+    "@proofengine/core": "0.1.0",
+    "@proofengine/solver-api": "0.1.0",
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}
