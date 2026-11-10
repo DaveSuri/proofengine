@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased selection:bg-slate-900 selection:text-white;
+  }
+}
+
+@media print {
+  header,
+  footer,
+  nav,
+  button {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+  }
+}

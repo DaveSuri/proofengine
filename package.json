@@ -9,6 +9,8 @@
   ],
   "scripts": {
     "build": "npm run build -w @proofengine/core && npm run build -w @proofengine/solver-api && npm run build -w @proofengine/cli && npm run build -w @proofengine/mcp-server",
+    "start": "node server.js",
+    "serve": "node server.js",
     "test": "npm run build && node test/core.test.js && node test/solver.test.js && node test/mcp-and-quota.test.js && node test/disasters.test.js",
     "test:core": "npm run build -w @proofengine/core && node test/core.test.js",
     "test:solver": "npm run build -w @proofengine/core && npm run build -w @proofengine/solver-api && node test/solver.test.js",
