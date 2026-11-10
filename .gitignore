@@ -2,3 +2,5 @@ node_modules/
 .turbo/
 .DS_Store
 *.log
+ai-technical-ba-agent/
+
