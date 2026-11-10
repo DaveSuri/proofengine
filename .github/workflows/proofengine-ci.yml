@@ -1,0 +1,40 @@
+name: ProofEngine Symbolic Verification CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    name: Z3 Symbolic Verification & Test Suite
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install --ignore-scripts
+
+      - name: Build all packages
+        run: npm run build
+
+      - name: Run Milestone 1-5 & Real-World Disaster Test Suites
+        run: npm test
+
+      - name: Lint financial code for @proofengine tags
+        run: node packages/cli/dist/index.js check examples src
+
+      - name: Symbolically verify production billing logic with Z3
+        run: |
+          node packages/cli/dist/index.js verify src/billing/proration.ts --no-quota
+          node packages/cli/dist/index.js verify test/fixtures/proration-fixed.ts --no-quota
+          node packages/cli/dist/index.js verify examples/billing.ts --no-quota
