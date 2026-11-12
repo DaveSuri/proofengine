@@ -2,11 +2,24 @@
   "name": "@proofengine/solver-api",
   "version": "0.1.0",
   "description": "Z3 solver integration, proof attestation, and counterexample extraction for ProofEngine",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DaveSuri/proofengine.git",
+    "directory": "packages/solver-api"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "prepublishOnly": "tsc"
   },
   "dependencies": {
     "@proofengine/core": "0.1.0",

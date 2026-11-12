@@ -2,12 +2,25 @@
   "name": "@proofengine/core",
   "version": "0.1.0",
   "description": "AST extraction, invariant parser, and SMT-LIB2 constraint generator for ProofEngine",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DaveSuri/proofengine.git",
+    "directory": "packages/core"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "test": "tsc && node ../../test/core.test.js"
+    "test": "tsc && node ../../test/core.test.js",
+    "prepublishOnly": "tsc"
   },
   "dependencies": {
     "@babel/parser": "^7.23.0",

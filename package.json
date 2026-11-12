@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "npm run build -w @proofengine/core && npm run build -w @proofengine/solver-api && npm run build -w @proofengine/cli && npm run build -w @proofengine/mcp-server",
+    "publish:packages": "npm run build && npm publish --workspaces --access public",
     "start": "node server.js",
     "serve": "node server.js",
     "test": "npm run build && node test/core.test.js && node test/solver.test.js && node test/mcp-and-quota.test.js && node test/disasters.test.js",

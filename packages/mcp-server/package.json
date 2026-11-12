@@ -2,6 +2,18 @@
   "name": "@proofengine/mcp-server",
   "version": "0.1.0",
   "description": "Model Context Protocol server exposing ProofEngine verification tools to AI agents",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DaveSuri/proofengine.git",
+    "directory": "packages/mcp-server"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
@@ -10,7 +22,8 @@
   "scripts": {
     "build": "tsc && chmod +x dist/index.js",
     "dev": "tsc --watch",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "prepublishOnly": "tsc && chmod +x dist/index.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^0.5.0",

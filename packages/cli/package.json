@@ -2,15 +2,29 @@
   "name": "@proofengine/cli",
   "version": "0.1.0",
   "description": "Local CLI for ProofEngine symbolic verification",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DaveSuri/proofengine.git",
+    "directory": "packages/cli"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "bin": {
-    "proofengine": "dist/index.js"
+    "proofengine": "dist/index.js",
+    "proofengine-cli": "dist/index.js"
   },
   "scripts": {
     "build": "tsc && chmod +x dist/index.js",
     "dev": "tsc --watch",
     "verify": "node dist/index.js verify",
-    "check": "node dist/index.js check"
+    "check": "node dist/index.js check",
+    "prepublishOnly": "tsc && chmod +x dist/index.js"
   },
   "dependencies": {
     "@proofengine/core": "0.1.0",
